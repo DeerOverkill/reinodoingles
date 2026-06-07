@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A English Solutions Dani Defendi oferece aulas e cursos de inglês personalizados presenciais e online. Metodologia moderna para adultos e adolescentes.">
+    <title>ESDD - Aulas e Cursos de Inglês | English Solutions Dani Defendi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Floating WhatsApp Toggle Button -->
+    <a href="https://api.whatsapp.com/send?phone=5511994864286&text=Olá, vim do site e gostaria de agendar o meu teste de nivelamento!" 
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="pulse-ring"></span>
+    </a>
+
+    <!-- Header / Navbar -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="English Solutions Dani Defendi Home">
+                <span class="logo-svg">
+                    <svg viewBox="0 0 100 100" width="36" height="36" fill="none" stroke="currentColor" stroke-width="8">
+                        <circle cx="50" cy="50" r="40" stroke="var(--color-primary)"></circle>
+                        <path d="M30 40h40M30 60h40M50 20v60" stroke="var(--color-accent)"></path>
+                    </svg>
+                </span>
+                <div class="logo-text">
+                    <span class="logo-brand">ESDD</span>
+                    <span class="logo-sub">English Solutions</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#quemsomos">Quem Somos</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="https://inglespraviajar.com.br/" target="_blank" rel="noopener noreferrer" class="nav-external">Inglês para Viajar 
+                        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                    </a></li>
+                    <li><a href="#certificacao">Certificações</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                </ul>
+                <a href="https://api.whatsapp.com/send?phone=5511994864286&text=Olá! Vim do site e gostaria de mais informações." 
+                   class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Fale Conosco</a>
+            </nav>
+
+            <!-- Burger Menu Trigger -->
+            <button class="burger-menu" aria-label="Abrir Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="logo">
+                <span class="logo-brand">ESDD</span>
+            </div>
+            <button class="drawer-close" aria-label="Fechar Menu">&times;</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#quemsomos">Quem Somos</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="https://inglespraviajar.com.br/" target="_blank" rel="noopener noreferrer">Inglês para Viajar ↗</a></li>
+                <li><a href="#certificacao">Certificações</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <a href="https://api.whatsapp.com/send?phone=5511994864286&text=Olá! Vim do site e gostaria de mais informações." 
+                   class="btn btn-primary w-full" target="_blank" rel="noopener noreferrer">Fale Conosco</a>
+            </div>
+        </nav>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- Main Layout Container -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content scroll-reveal">
+                    <span class="hero-tag">Aulas e Cursos Personalizados</span>
+                    <h1>Inglês sob medida para os seus <span>objetivos</span></h1>
+                    <p>A <strong>English Solutions Dani Defendi</strong> oferece diversos cursos para você aprender inglês conforme as suas metas, tudo isso com os melhores professores e uma metodologia moderna e comprovada cientificamente.</p>
+                    <div class="hero-actions">
+                        <a href="#cursos" class="btn btn-accent">Quero Conhecer os Cursos</a>
+                        <a href="#quemsomos" class="btn btn-outline">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="hero-image scroll-reveal">
+                    <div class="image-wrapper">
+                        <img src="assets/hero_banner.png" alt="Grupo de adultos aprendendo inglês de forma moderna e colaborativa" class="premium-shadow">
+                        <div class="blob-accent-1"></div>
+                        <div class="blob-accent-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Para quem é" (Target Audience) Section -->
+        <section class="audience-section" id="para-quem">
+            <div class="container">
+                <div class="section-title text-center scroll-reveal">
+                    <h2>Nossos cursos são para quem:</h2>
+                    <p>Encontre a sua motivação e veja como podemos ajudar você a conquistar sua autonomia no idioma</p>
+                </div>
+                
+                <div class="audience-grid">
+                    <!-- Card 1 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-cyan">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h3>Vai morar fora do país</h3>
+                        <p>Vai se mudar para o exterior e precisa aprender inglês? A English Solutions tem a metodologia ideal para ajudar você!</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-pink">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                            </svg>
+                        </div>
+                        <h3>Precisa do inglês no trabalho</h3>
+                        <p>Para quem quer passar em uma entrevista de emprego ou precisa do inglês corporativo para subir de cargo e alavancar a carreira.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-navy">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c0 2 2.5 3 6 3s6-1 6-3v-5"/>
+                            </svg>
+                        </div>
+                        <h3>Deseja fazer intercâmbio</h3>
+                        <p>Precisa do inglês acadêmico e cotidiano para realizar o seu sonho de intercâmbio? Nós preparamos você para essa jornada.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-pink">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Não consegue evoluir de nível</h3>
+                        <p>Se você está preso no básico ou intermediário (o famoso platô), a English Solutions ajuda você a finalmente dominar a fluência.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-cyan">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/>
+                            </svg>
+                        </div>
+                        <h3>Quer aprender para viajar</h3>
+                        <p>Possuímos um método comunicativo específico para quem quer viajar sem passar perrengues em aeroportos, hotéis e restaurantes.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-navy">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Precisa de um Certificado</h3>
+                        <p>Preparatórios dedicados para a obtenção de pontuações de destaque em testes de proficiência internacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Quem Somos" (About Us) Section -->
+        <section class="about-section" id="quemsomos">
+            <div class="container grid-2">
+                <div class="about-content scroll-reveal">
+                    <span class="section-tag">Quem Somos</span>
+                    <h2>A English Solutions é a solução ideal para você!</h2>
+                    <p>A <strong>English Solutions Dani Defendi</strong> é uma escola de inglês premium de aulas individuais e em pequenos grupos, especializada em adultos e adolescentes. Nossos cursos são personalizados de acordo com os níveis e preferências de cada aluno.</p>
+                    <p>As aulas são altamente comunicativas e interativas. Usamos métodos e approaches cientificamente comprovados de aquisição de linguagem. Nossos professores são certificados internacionalmente e contam com vasta experiência de mercado.</p>
+                    <p class="highlight-text">Acreditamos que aprender inglês é perfeitamente possível e pode ser um processo dinâmico e divertido.</p>
+                </div>
+                
+                <div class="about-highlights scroll-reveal">
+                    <h3>Diferenciais que aceleram seu aprendizado</h3>
+                    <ul class="highlight-list">
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Aulas interativas:</strong> Foco absoluto em conversação ativa e simulações do mundo real.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Professores Certificados:</strong> Equipe qualificada com as mais respeitadas certificações globais.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Clima Acolhedor:</strong> Espaço livre de julgamentos, ideal para destravar a fala naturalmente.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Aluno como Protagonista:</strong> O professor atua como um facilitador do seu desenvolvimento individual.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Metas de Rotina:</strong> Planejamento personalizado para integrar o inglês no seu dia a dia.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Material Moderno:</strong> Acesso a ferramentas digitais e materiais de editoras líderes mundiais.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Cursos" (Courses) Section -->
+        <section class="courses-section" id="cursos">
+            <div class="container">
+                <div class="section-title text-center scroll-reveal">
+                    <h2>Conheça nossos cursos</h2>
+                    <p>Aulas personalizadas no formato online ou presencial de acordo com a sua preferência</p>
+                </div>
+
+                <!-- Custom Slider / Carousel -->
+                <div class="slider-wrapper scroll-reveal">
+                    <div class="slider-container" id="courseSlider">
+                        
+                        <!-- Slide 1 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder color-teal">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                                </svg>
+                                <h3>Curso Geral</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag">Todos os Níveis</span>
+                                <h4>Aulas de Inglês Personalizadas</h4>
+                                <p>Cursos sob medida estruturados de acordo com o nível atual e interesses específicos de cada estudante.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511989647999&text=Olá! Estou interessado em fazer um curso de inglês personalizado." 
+                                   class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder color-pink">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                                </svg>
+                                <h3>Corporativo</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag">Business English</span>
+                                <h4>Grupos Empresariais & In-Company</h4>
+                                <p>Oferecemos cursos focados em inglês corporativo para equipes e líderes que necessitam expandir negócios.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511989647999&text=Olá! Estou interessado no curso de inglês para grupos empresariais." 
+                                   class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Falar Conosco</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder color-navy">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                                <h3>Conversação</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag">Níveis Avançados</span>
+                                <h4>Curso de Conversação Dinâmica</h4>
+                                <p>Focado em expandir vocabulário, discutir temas atuais, pronúncia, phrasal verbs e fluência natural.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511989647999&text=Olá! Estou interessado no curso de conversação avançada." 
+                                   class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Quero Conversar</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder color-gold">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                                <h3>Português</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag">Estrangeiros</span>
+                                <h4>Português para Estrangeiros</h4>
+                                <p>Aulas completas de cultura, gramática e conversação prática em português para profissionais estrangeiros.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511989647999&text=Olá! Estou interessado no curso de português para estrangeiros." 
+                                   class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Learn Portuguese</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" id="sliderPrev" aria-label="Slide anterior">&#10094;</button>
+                        <div class="slider-dots" id="sliderDots"></div>
+                        <button class="slider-arrow next" id="sliderNext" aria-label="Próximo slide">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Digital Platforms Sub-section -->
+                <div class="platforms-sub-section">
+                    <div class="section-title text-center scroll-reveal">
+                        <h3>Conheça também nossas plataformas de cursos</h3>
+                        <p>Treinamentos assíncronos e complementares para integrar à sua agenda diária</p>
+                    </div>
+
+                    <div class="platforms-grid">
+                        <!-- Platform Card 1 -->
+                        <div class="platform-card scroll-reveal">
+                            <div class="platform-info">
+                                <span class="platform-badge">Curso Online Gravado</span>
+                                <h4>Inglês Para Viajar</h4>
+                                <p>O Curso Inglês para Viajar vai te ensinar de maneira prática e totalmente aplicável, o inglês estritamente necessário para você se comunicar em hotéis, aeroportos, compras e alfândega, evitando perrengues.</p>
+                                <a href="https://inglespraviajar.com.br" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Acessar Inglês para Viajar</a>
+                            </div>
+                        </div>
+
+                        <!-- Platform Card 2 -->
+                        <div class="platform-card scroll-reveal">
+                            <div class="platform-info">
+                                <span class="platform-badge">Rotina Diária</span>
+                                <h4>Inglês Todo Santo Dia</h4>
+                                <p>Ideal para integrar o idioma na sua rotina diária. Acesso a dezenas de aulas curtas direto no aplicativo e novas postagens de vídeo e materiais toda semana para você praticar continuamente de onde estiver.</p>
+                                <a href="#app" class="btn btn-accent btn-sm">Conhecer o Aplicativo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- "Certificações" (Prep Courses) Section -->
+        <section class="certifications-section" id="certificacao">
+            <div class="container">
+                <div class="certifications-card-wrapper grid-2">
+                    <div class="certifications-text scroll-reveal">
+                        <span class="section-tag tag-light">Exames de Proficiência</span>
+                        <h2>Preparatórios para as principais Certificações Internacionais</h2>
+                        <p>Obtenha a pontuação desejada para vistos, processos de imigração, candidaturas corporativas globais ou admissões em universidades no exterior. Nossa metodologia de treinamento foca na estrutura das provas e resolução de simulados.</p>
+                        <a href="https://api.whatsapp.com/send?phone=5511999928310&text=Olá! Gostaria de me preparar para um certificado internacional." 
+                           class="btn btn-accent" target="_blank" rel="noopener noreferrer">Quero me Preparar para uma Certificação</a>
+                    </div>
+                    
+                    <div class="certifications-grid scroll-reveal">
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Preparação para IELTS</h4>
+                                <p>Foco detalhado nas sessões de Speaking, Writing, Reading e Listening do teste oficial acadêmico ou geral.</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Preparação para TOEFL</h4>
+                                <p>Estratégias específicas para gerenciar o tempo e gabaritar as questões do TOEFL iBT com simulados práticos.</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Preparação para TOEIC</h4>
+                                <p>Treinamento direcionado para quem precisa comprovar competência no inglês de negócios corporativo.</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Exames de Cambridge (PET, FCE, CAE, CPE)</h4>
+                                <p>Cronograma intensivo visando aprovação nas qualificações mais prestigiadas e vitalícias da Universidade de Cambridge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Serviços" (Translation Services) Section -->
+        <section class="services-section" id="servicos">
+            <div class="container">
+                <div class="section-title text-center scroll-reveal">
+                    <span class="section-tag">Nossos Serviços</span>
+                    <h2>Além dos cursos, a English Solutions apoia seus negócios</h2>
+                    <p>Oferecemos serviços corporativos e de tradução técnica para atender às demandas de internacionalização</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3>Tradução de Documentos</h3>
+                        <p>Traduções e versões profissionais de artigos, e-mails, contratos, relatórios técnicos e apresentações de negócios com revisão gramatical rigorosa.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Tradução Simultânea Online</h3>
+                        <p>Suporte e tradução de reuniões executivas de negócios, transmissões, conferências virtuais e apresentações remotas internacionais.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                                <line x1="7" y1="2" x2="7" y2="22"/>
+                                <line x1="17" y1="2" x2="17" y2="22"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <line x1="2" y1="7" x2="7" y2="7"/>
+                                <line x1="2" y1="17" x2="7" y2="17"/>
+                                <line x1="17" y1="17" x2="22" y2="17"/>
+                                <line x1="17" y1="7" x2="22" y2="7"/>
+                            </svg>
+                        </div>
+                        <h3>Cortes e Legendas de Mídia</h3>
+                        <p>Tradução para cortes de podcast, vídeos educacionais, institucionais e conteúdos informativos para Instagram, YouTube e TikTok.</p>
+                    </div>
+                </div>
+
+                <div class="text-center scroll-reveal" style="margin-top: 3rem;">
+                    <a href="https://api.whatsapp.com/send?phone=5511999928310&text=Olá! Gostaria de fazer um orçamento de serviço de tradução." 
+                       class="btn btn-primary" target="_blank" rel="noopener noreferrer">Contratar Serviço de Tradução</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Section -->
+        <section class="app-section" id="app">
+            <div class="container grid-2">
+                <div class="app-image scroll-reveal">
+                    <img src="assets/app_mockup.png" alt="Aplicativo Inglês Todo Santo Dia rodando em um smartphone moderno" class="app-mockup-img">
+                </div>
+                
+                <div class="app-content scroll-reveal">
+                    <span class="section-tag tag-light">Aplicativo Próprio</span>
+                    <h2>Aprenda inglês todo santo dia na palma da sua mão</h2>
+                    <p>Desenvolvemos uma plataforma de aprendizado móvel exclusiva para dar suporte aos nossos alunos. Com o app <strong>Inglês Todo Santo Dia</strong>, você tem acesso contínuo a vídeos rápidos, exercícios práticos e materiais novos adicionados semanalmente.</p>
+                    <p>Transforme momentos livres da sua rotina diária em progresso consistente rumo à fluência.</p>
+                    
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/br/app/ingles-todo-santo-dia/id6450062575" target="_blank" rel="noopener noreferrer" class="store-badge">
+                            <span class="store-logo"></span>
+                            <span class="store-text">
+                                <small>Disponível na</small>
+                                <strong>App Store</strong>
+                            </span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.itsd.mobile" target="_blank" rel="noopener noreferrer" class="store-badge">
+                            <span class="store-logo">▶</span>
+                            <span class="store-text">
+                                <small>Disponível no</small>
+                                <strong>Google Play</strong>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-brand">ESDD</span>
+                </div>
+                <p>Ensino personalizado de inglês para adultos e adolescentes focado na comunicação ativa e resultados práticos.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Menu Rápido</h4>
+                <ul>
+                    <li><a href="#quemsomos">Quem Somos</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#certificacao">Certificações</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contato Executivo</h4>
+                <p>WhatsApp Principal: +55 (11) 99486-4286</p>
+                <p>WhatsApp Comercial: +55 (11) 98964-7999</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 ESDD - English Solutions Dani Defendi. Todos os direitos reservados.</p>
+                <p>CNPJ: DANIELA MARQUART AKL DEFENDI 19.625.381/0001-22</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
