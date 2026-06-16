@@ -5,24 +5,24 @@
 /* Design Tokens & Variables */
 :root {
     /* Colors */
-    --color-primary: #121829;       /* Deep slate navy */
-    --color-primary-light: #1e293b; /* Medium slate navy */
-    --color-secondary: #0ea5e9;     /* Vibrant cyan */
-    --color-accent: #ea1d76;        /* Brand fuchsia */
-    --color-accent-hover: #d01062;
-    --color-bg-light: #f8fafc;      /* Subtle slate white */
+    --color-primary: #100d3c;       /* Deep midnight navy */
+    --color-primary-light: #1b145c; /* Lighter indigo navy */
+    --color-secondary: #f2b85c;     /* Honey gold */
+    --color-accent: #d97706;        /* Warm amber gold */
+    --color-accent-hover: #b45309;  /* Darker amber gold */
+    --color-bg-light: #f5f6fa;      /* Soft navy-tinted off-white */
     --color-card-bg: #ffffff;
     
     /* Text Colors */
     --text-main: #0f172a;           /* Near black */
-    --text-muted: #64748b;          /* Cool grey */
-    --text-light: #f1f5f9;          /* Off-white */
+    --text-muted: #4b5563;          /* Cool grey */
+    --text-light: #f8fafc;          /* Off-white */
     
-    /* Semantic Colors */
-    --color-teal: #14b8a6;
-    --color-navy: #3b82f6;
-    --color-gold: #f59e0b;
-    --color-pink: #ec4899;
+    /* Semantic Colors (inspired by the C.R.E.I.A lion mane) */
+    --color-teal: #1495a6;          /* Lion mane teal */
+    --color-navy: #1e40af;          /* Lion mane blue */
+    --color-gold: #f59e0b;          /* Lion mane gold */
+    --color-orange: #e84521;        /* Lion mane red-orange */
 
     /* Fonts */
     --font-heading: 'Outfit', sans-serif;
@@ -33,7 +33,7 @@
     --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
     --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.06);
     --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.1);
-    --shadow-glow: 0 15px 30px rgba(234, 29, 118, 0.15);
+    --shadow-glow: 0 15px 30px rgba(242, 184, 92, 0.18);
     
     /* Borders & Radius */
     --radius-sm: 8px;
@@ -152,7 +152,7 @@ section {
     letter-spacing: 0.1em;
     color: var(--color-accent);
     margin-bottom: 1rem;
-    background-color: rgba(234, 29, 118, 0.08);
+    background-color: rgba(242, 184, 92, 0.12);
     padding: 0.35rem 1rem;
     border-radius: var(--radius-full);
 }
@@ -203,15 +203,15 @@ section {
 }
 
 .btn-accent {
-    background: linear-gradient(135deg, var(--color-accent) 0%, #db2777 100%);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
     color: #ffffff;
     box-shadow: var(--shadow-glow);
 }
 
 .btn-accent:hover {
-    background: linear-gradient(135deg, var(--color-accent-hover) 0%, #be185d 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
     transform: translateY(-2px);
-    box-shadow: 0 18px 36px rgba(234, 29, 118, 0.25);
+    box-shadow: 0 18px 36px rgba(242, 184, 92, 0.3);
 }
 
 .btn-outline {
@@ -466,8 +466,8 @@ section {
 .hero-section {
     padding-top: 9rem;
     padding-bottom: 6rem;
-    background: radial-gradient(circle at 90% 10%, rgba(234, 29, 118, 0.04) 0%, transparent 40%),
-                radial-gradient(circle at 10% 90%, rgba(14, 165, 233, 0.04) 0%, transparent 40%);
+    background: radial-gradient(circle at 90% 10%, rgba(242, 184, 92, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(20, 149, 166, 0.04) 0%, transparent 40%);
 }
 
 .hero-grid {
@@ -548,7 +548,7 @@ section {
     height: 120%;
     top: -10%;
     left: -10%;
-    background: radial-gradient(circle, rgba(234, 29, 118, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(242, 184, 92, 0.15) 0%, transparent 60%);
     z-index: 0;
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     animation: blob-float 12s infinite ease-in-out;
@@ -560,7 +560,7 @@ section {
     height: 100%;
     bottom: -15%;
     right: -10%;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(20, 149, 166, 0.12) 0%, transparent 60%);
     z-index: 1;
     border-radius: 50% 30% 20% 50% / 50% 40% 60% 30%;
     animation: blob-float 18s infinite ease-in-out reverse;
@@ -641,17 +641,17 @@ section {
 }
 
 .icon-cyan {
-    background-color: rgba(14, 165, 233, 0.08);
-    color: var(--color-secondary);
+    background-color: rgba(20, 149, 166, 0.08);
+    color: var(--color-teal);
 }
 
-.icon-pink {
-    background-color: rgba(234, 29, 118, 0.08);
-    color: var(--color-accent);
+.icon-orange {
+    background-color: rgba(232, 69, 33, 0.08);
+    color: var(--color-orange);
 }
 
 .icon-navy {
-    background-color: rgba(59, 130, 246, 0.08);
+    background-color: rgba(30, 64, 175, 0.08);
     color: var(--color-navy);
 }
 
@@ -807,12 +807,12 @@ section {
     background: linear-gradient(135deg, var(--color-teal) 0%, #0d9488 100%);
 }
 
-.color-pink {
-    background: linear-gradient(135deg, var(--color-pink) 0%, #db2777 100%);
+.color-orange {
+    background: linear-gradient(135deg, var(--color-orange) 0%, #b82c14 100%);
 }
 
 .color-navy {
-    background: linear-gradient(135deg, var(--color-navy) 0%, #2563eb 100%);
+    background: linear-gradient(135deg, var(--color-navy) 0%, #1d4ed8 100%);
 }
 
 .color-gold {
