@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Receba grátis o Guia de Técnicas de Conversação em Inglês da C.R.E.I.A Idiomas. Preencha o formulário e baixe o PDF exclusivo agora.">
+    <title>Guia Gratuito de Conversação em Inglês | C.R.E.I.A Idiomas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ── Page-specific overrides ── */
+        body {
+            background: linear-gradient(145deg, var(--color-primary) 0%, #1a2a6c 50%, #0d2060 100%);
+            min-height: 100vh;
+        }
+
+        /* Top bar */
+        .guide-topbar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 100;
+            background: rgba(16, 13, 60, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 0 1.5rem;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 100%;
+        }
+
+        .guide-topbar .logo-brand { color: #fff; font-size: 1.35rem; }
+        .guide-topbar .logo-sub   { color: var(--color-secondary); }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.65);
+            transition: var(--transition-smooth);
+        }
+        .back-link:hover { color: #fff; transform: translateX(-3px); }
+
+        /* ── Main layout ── */
+        .guide-page {
+            min-height: 100vh;
+            padding: 7rem 1.5rem 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative blobs */
+        .guide-blob-1 {
+            position: fixed; pointer-events: none;
+            width: 600px; height: 600px;
+            top: -150px; right: -150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(20,149,166,0.15) 0%, transparent 65%);
+            animation: blob-float 14s ease-in-out infinite;
+        }
+        .guide-blob-2 {
+            position: fixed; pointer-events: none;
+            width: 500px; height: 500px;
+            bottom: -150px; left: -100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(242,184,92,0.12) 0%, transparent 65%);
+            animation: blob-float 20s ease-in-out infinite reverse;
+        }
+
+        /* ── Card ── */
+        .guide-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 3.5rem 3rem;
+            max-width: 620px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+        }
+
+        @media (max-width: 600px) {
+            .guide-card { padding: 2.5rem 1.5rem; }
+        }
+
+        /* Badge */
+        .lead-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(20,149,166,0.2);
+            border: 1.5px solid rgba(20,149,166,0.5);
+            color: #5de0ec;
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.4rem 1.1rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Title */
+        .guide-card h1 {
+            color: #ffffff;
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .lead-highlight {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lead-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* Benefits */
+        .lead-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2.25rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-full);
+            padding: 0.4rem 0.9rem;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.88rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        /* Divider */
+        .form-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Form fields */
+        .form-group { margin-bottom: 1.2rem; }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 0.87rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.45rem;
+        }
+
+        .input-wrapper { position: relative; }
+
+        .input-icon {
+            position: absolute;
+            left: 1rem; top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.35);
+            pointer-events: none;
+            transition: color 0.3s;
+        }
+        .input-wrapper:focus-within .input-icon { color: var(--color-secondary); }
+
+        .lead-form input {
+            width: 100%;
+            padding: 0.85rem 1rem 0.85rem 2.9rem;
+            background-color: rgba(255,255,255,0.07);
+            border: 1.5px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+            outline: none;
+        }
+        .lead-form input::placeholder { color: rgba(255,255,255,0.28); }
+        .lead-form input:focus {
+            background-color: rgba(255,255,255,0.11);
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 0 3px rgba(242,184,92,0.15);
+        }
+        .lead-form input.input-error {
+            border-color: #f87171;
+            box-shadow: 0 0 0 3px rgba(248,113,113,0.15);
+        }
+
+        .field-error {
+            display: block;
+            color: #fca5a5;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            min-height: 1rem;
+            font-family: var(--font-heading);
+        }
+
+        /* Submit button */
+        .btn-lead {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            color: #fff;
+            font-size: 1rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: 0.4rem;
+            box-shadow: 0 8px 24px rgba(217,119,6,0.35);
+            transition: var(--transition-smooth);
+        }
+        .btn-lead:hover  { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(217,119,6,0.45); }
+        .btn-lead:active { transform: translateY(0); }
+        .btn-lead:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+        .btn-label, .btn-loading {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .spin { animation: spin 0.9s linear infinite; }
+
+        /* Disclaimer */
+        .form-disclaimer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.35);
+            margin-top: 1.2rem;
+            text-align: center;
+        }
+
+        /* ── Reward modal ── */
+        .reward-modal-overlay {
+            position: fixed; inset: 0;
+            background-color: rgba(5,5,20,0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .reward-modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .reward-modal {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+            transform: scale(0.88) translateY(24px);
+            transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reward-modal-overlay.active .reward-modal { transform: scale(1) translateY(0); }
+
+        .reward-icon-wrap {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .reward-icon-ring {
+            position: absolute;
+            width: 84px; height: 84px;
+            border-radius: 50%;
+            background: rgba(20,149,166,0.1);
+            animation: reward-ring 1.4s ease-out forwards;
+        }
+        @keyframes reward-ring {
+            0%   { transform: scale(0.5); opacity: 0; }
+            60%  { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1);   opacity: 1; }
+        }
+        .reward-check { position: relative; z-index: 1; }
+        .check-path {
+            stroke-dasharray: 60;
+            stroke-dashoffset: 60;
+            animation: draw-check 0.6s ease-out 0.35s forwards;
+        }
+        @keyframes draw-check { to { stroke-dashoffset: 0; } }
+
+        .reward-modal h2 { font-size: 1.55rem; margin-bottom: 0.5rem; }
+        .reward-name {
+            color: var(--color-teal);
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 0.75rem;
+        }
+        .reward-modal > p { font-size: 0.96rem; margin-bottom: 2rem; }
+        .reward-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+        .reward-cta .btn { flex: 1; min-width: 130px; gap: 0.5rem; }
+
+        /* Confetti */
+        .reward-confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .confetti-piece {
+            position: absolute;
+            width: 8px; height: 8px;
+            border-radius: 2px;
+            top: -10px;
+            animation: confetti-fall linear forwards;
+        }
+        @keyframes confetti-fall {
+            0%   { transform: translateY(0) rotate(0deg);   opacity: 1; }
+            100% { transform: translateY(520px) rotate(720deg); opacity: 0; }
+        }
+
+        /* ── PDF placeholder badge ── */
+        .pdf-placeholder-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(20,149,166,0.08);
+            border: 1.5px dashed rgba(20,149,166,0.45);
+            border-radius: var(--radius-sm);
+            color: var(--color-teal);
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.4rem 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="guide-topbar">
+        <a href="index.html" class="logo" aria-label="Voltar ao site">
+            <span class="logo-svg">
+                <svg viewBox="0 0 100 100" width="30" height="30" fill="none" stroke="currentColor" stroke-width="8">
+                    <circle cx="50" cy="50" r="40" stroke="var(--color-secondary)"></circle>
+                    <path d="M30 40h40M30 60h40M50 20v60" stroke="var(--color-secondary)"></path>
+                </svg>
+            </span>
+            <div class="logo-text">
+                <span class="logo-brand">C.R.E.I.A</span>
+                <span class="logo-sub">Idiomas</span>
+            </div>
+        </a>
+        <a href="index.html" class="back-link" aria-label="Voltar ao site principal">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            Voltar ao site
+        </a>
+    </div>
+
+    <!-- Background blobs -->
+    <div class="guide-blob-1" aria-hidden="true"></div>
+    <div class="guide-blob-2" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main class="guide-page">
+        <div class="guide-card">
+
+            <!-- Badge -->
+            <div class="lead-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Material 100% Gratuito
+            </div>
+
+            <!-- Title -->
+            <h1>Receba <span class="lead-highlight">Grátis</span> o Guia de Técnicas de Conversação em Inglês</h1>
+            <p class="lead-desc">
+                Preencha o formulário e receba imediatamente um PDF exclusivo com as melhores técnicas para destravar sua conversação — usado pelos nossos professores certificados internacionalmente.
+            </p>
+
+            <!-- Benefits -->
+            <div class="lead-benefits">
+                <div class="benefit-item"><span>💬</span> 10 técnicas comprovadas</div>
+                <div class="benefit-item"><span>📖</span> Frases prontas para usar</div>
+                <div class="benefit-item"><span>⚡</span> Download imediato</div>
+            </div>
+
+            <!-- PDF Placeholder notice -->
+            <div class="pdf-placeholder-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                </svg>
+                PDF · Placeholder — substitua pelo arquivo real
+            </div>
+
+            <hr class="form-divider">
+
+            <!-- Lead Form -->
+            <form id="leadForm" class="lead-form" novalidate>
+
+                <div class="form-group">
+                    <label for="leadName">Seu nome completo</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <input type="text" id="leadName" name="name" placeholder="Ex: João Silva" required autocomplete="name">
+                    </div>
+                    <span class="field-error" id="leadNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="leadEmail">Seu melhor e-mail</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <input type="email" id="leadEmail" name="email" placeholder="Ex: joao@email.com" required autocomplete="email">
+                    </div>
+                    <span class="field-error" id="leadEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="leadWhatsapp">WhatsApp (com DDD)</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <input type="tel" id="leadWhatsapp" name="whatsapp" placeholder="Ex: (11) 98765-4321" required autocomplete="tel" maxlength="16">
+                    </div>
+                    <span class="field-error" id="leadWhatsappError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-lead" id="leadSubmitBtn">
+                    <span class="btn-label">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Quero Meu Guia Gratuito!
+                    </span>
+                    <span class="btn-loading" style="display:none;">
+                        <svg class="spin" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0110 10"/>
+                        </svg>
+                        Aguarde...
+                    </span>
+                </button>
+
+                <p class="form-disclaimer">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    Seus dados estão seguros. Sem spam, prometemos!
+                </p>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- PDF Reward Modal -->
+    <div class="reward-modal-overlay" id="rewardModalOverlay" role="dialog" aria-modal="true" aria-labelledby="rewardModalTitle">
+        <div class="reward-modal">
+
+            <!-- Confetti container -->
+            <div class="reward-confetti" id="rewardConfetti"></div>
+
+            <!-- Animated check icon -->
+            <div class="reward-icon-wrap">
+                <div class="reward-icon-ring"></div>
+                <svg class="reward-check" viewBox="0 0 52 52" width="56" height="56">
+                    <circle cx="26" cy="26" r="25" fill="none" stroke="var(--color-teal)" stroke-width="2"/>
+                    <path class="check-path" fill="none" stroke="var(--color-teal)" stroke-width="3"
+                          stroke-linecap="round" stroke-linejoin="round" d="M14 27l9 9 16-16"/>
+                </svg>
+            </div>
+
+            <h2 id="rewardModalTitle">Seu Guia está Pronto! 🎉</h2>
+            <p id="rewardModalPersonName" class="reward-name"></p>
+            <p>
+                O PDF com as <strong>10 Técnicas de Conversação em Inglês</strong>
+                será disponibilizado assim que o arquivo for adicionado.
+                <br><br>
+                <em style="font-size:0.82rem;color:var(--text-muted);">
+                    ⚙️ Placeholder ativo — substitua o link de download pelo PDF real.
+                </em>
+            </p>
+
+            <div class="reward-cta">
+                <button class="btn btn-accent" id="rewardDownloadBtn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Baixar PDF
+                </button>
+                <a href="index.html" class="btn btn-outline" id="rewardCloseBtn">
+                    Voltar ao site
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    /* =========================================================
+       Guia Grátis — Form Validation + Reward Modal
+       ========================================================= */
+
+    // ── Helpers ──────────────────────────────────────────────
+    const $ = (id) => document.getElementById(id);
+
+    function maskPhone(input) {
+        let v = input.value.replace(/\D/g, '').slice(0, 11);
+        if (v.length >= 3 && v.length <= 6) {
+            v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+        } else if (v.length > 6) {
+            v = `(${v.slice(0,2)}) ${v.slice(2, v.length <= 10 ? 6 : 7)}-${v.slice(v.length <= 10 ? 6 : 7)}`;
+        } else if (v.length >= 1) {
+            v = `(${v}`;
+        }
+        input.value = v;
+    }
+
+    function validateField(input, errorEl, message, extraCheck) {
+        const ok = input.value.trim() !== '' && (extraCheck ? extraCheck(input.value.trim()) : true);
+        input.classList.toggle('input-error', !ok);
+        errorEl.textContent = ok ? '' : message;
+        return ok;
+    }
+
+    // ── WhatsApp mask ────────────────────────────────────────
+    $('leadWhatsapp').addEventListener('input', function () { maskPhone(this); });
+
+    // ── Form submission ───────────────────────────────────────
+    $('leadForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nameInput   = $('leadName');
+        const emailInput  = $('leadEmail');
+        const phoneInput  = $('leadWhatsapp');
+
+        const okName  = validateField(nameInput,  $('leadNameError'),     'Por favor, informe seu nome.',   null);
+        const okEmail = validateField(emailInput, $('leadEmailError'),    'Informe um e-mail válido.',      (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+        const okPhone = validateField(phoneInput, $('leadWhatsappError'), 'Informe um WhatsApp com DDD.',   (v) => v.replace(/\D/g,'').length >= 10);
+
+        if (!okName || !okEmail || !okPhone) return;
+
+        // Show loading state
+        const btn   = $('leadSubmitBtn');
+        const label = btn.querySelector('.btn-label');
+        const load  = btn.querySelector('.btn-loading');
+        btn.disabled = true;
+        label.style.display = 'none';
+        load.style.display  = 'inline-flex';
+
+        // Simulate processing delay then show modal
+        setTimeout(() => {
+            btn.disabled = false;
+            label.style.display = 'inline-flex';
+            load.style.display  = 'none';
+
+            openRewardModal(nameInput.value.trim().split(' ')[0]);
+
+            // ── PLACEHOLDER: replace URL below with the real PDF path ──
+            // triggerDownload('assets/guia-conversacao.pdf', 'Guia-Tecnicas-Conversacao-Ingles.pdf');
+        }, 1400);
+    });
+
+    // ── Modal logic ────────────────────────────────────────────
+    function openRewardModal(firstName) {
+        $('rewardModalPersonName').textContent = `Olá, ${firstName}! 👋`;
+        const overlay = $('rewardModalOverlay');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        spawnConfetti();
+    }
+
+    function closeRewardModal() {
+        $('rewardModalOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    $('rewardCloseBtn').addEventListener('click', closeRewardModal);
+    $('rewardModalOverlay').addEventListener('click', function (e) {
+        if (e.target === this) closeRewardModal();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeRewardModal();
+    });
+
+    // ── Download placeholder ───────────────────────────────────
+    $('rewardDownloadBtn').addEventListener('click', function () {
+        // PLACEHOLDER — uncomment and point to real file when ready:
+        // triggerDownload('assets/guia-conversacao.pdf', 'Guia-Tecnicas-Conversacao-Ingles.pdf');
+        alert('⚙️ PDF ainda não foi adicionado. Substitua o placeholder pelo arquivo real em assets/guia-conversacao.pdf');
+    });
+
+    function triggerDownload(url, filename) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
+    // ── Confetti ───────────────────────────────────────────────
+    function spawnConfetti() {
+        const container = $('rewardConfetti');
+        container.innerHTML = '';
+        const colors = ['#f2b85c','#d97706','#1495a6','#1e40af','#ffffff','#f59e0b'];
+        for (let i = 0; i < 38; i++) {
+            const piece = document.createElement('div');
+            piece.className = 'confetti-piece';
+            piece.style.left       = Math.random() * 100 + '%';
+            piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+            piece.style.width      = (6 + Math.random() * 8) + 'px';
+            piece.style.height     = (6 + Math.random() * 8) + 'px';
+            piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+            piece.style.animationDuration  = (1.2 + Math.random() * 1.8) + 's';
+            piece.style.animationDelay     = (Math.random() * 0.5) + 's';
+            container.appendChild(piece);
+        }
+    }
+    </script>
+</body>
+</html>
