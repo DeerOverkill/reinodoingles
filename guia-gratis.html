@@ -573,12 +573,12 @@
     $('leadWhatsapp').addEventListener('input', function () { maskPhone(this); });
 
     // ── Form submission ───────────────────────────────────────
-    $('leadForm').addEventListener('submit', function (e) {
+    $('leadForm').addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        const nameInput   = $('leadName');
-        const emailInput  = $('leadEmail');
-        const phoneInput  = $('leadWhatsapp');
+        const nameInput  = $('leadName');
+        const emailInput = $('leadEmail');
+        const phoneInput = $('leadWhatsapp');
 
         const okName  = validateField(nameInput,  $('leadNameError'),     'Por favor, informe seu nome.',   null);
         const okEmail = validateField(emailInput, $('leadEmailError'),    'Informe um e-mail válido.',      (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
@@ -594,17 +594,42 @@
         label.style.display = 'none';
         load.style.display  = 'inline-flex';
 
-        // Simulate processing delay then show modal
-        setTimeout(() => {
+        // Montar FormData para envio ao PHP
+        const formData = new FormData();
+        formData.append('nome',     nameInput.value.trim());
+        formData.append('email',    emailInput.value.trim());
+        formData.append('whatsapp', phoneInput.value.trim());
+        formData.append('origem',   'guia-gratis');
+
+        try {
+            const resp = await fetch('salvar_lead.php', {
+                method: 'POST',
+                body:   formData,
+            });
+
+            const data = await resp.json();
+
             btn.disabled = false;
             label.style.display = 'inline-flex';
             load.style.display  = 'none';
 
-            openRewardModal(nameInput.value.trim().split(' ')[0]);
-
-            // ── PLACEHOLDER: replace URL below with the real PDF path ──
-            // triggerDownload('assets/guia-conversacao.pdf', 'Guia-Tecnicas-Conversacao-Ingles.pdf');
-        }, 1400);
+            if (data.ok) {
+                // Sucesso: abre modal e aciona download do PDF
+                openRewardModal(nameInput.value.trim().split(' ')[0]);
+                // Descomente a linha abaixo quando tiver o PDF real:
+                // triggerDownload('assets/guia-conversacao.pdf', 'Guia-Tecnicas-Conversacao-Ingles.pdf');
+            } else {
+                // Erro retornado pelo servidor
+                $('leadNameError').textContent = data.msg || 'Erro ao cadastrar. Tente novamente.';
+            }
+        } catch (err) {
+            // Erro de rede ou servidor offline
+            btn.disabled = false;
+            label.style.display = 'inline-flex';
+            load.style.display  = 'none';
+            $('leadNameError').textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+            console.error('[CRI Lead Form]', err);
+        }
     });
 
     // ── Modal logic ────────────────────────────────────────────

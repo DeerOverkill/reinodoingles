@@ -1,0 +1,6 @@
+# ============================================================
+#  C.R.I. Idiomas — Proteção da pasta /dados/
+#  Impede acesso direto via browser ao CSV de leads
+# ============================================================
+Options -Indexes
+Deny from all
