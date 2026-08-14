@@ -115,7 +115,7 @@ p {
 
 strong {
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 a {
@@ -1059,8 +1059,63 @@ section {
     background-color: var(--color-accent);
 }
 
+/* Courses Perks / Vantagens */
+.courses-perks {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.perks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .perks-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.perk-item {
+    background: var(--color-bg-light);
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.perk-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    background: #ffffff;
+}
+
+.perk-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.perk-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.perk-item p {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Platforms Section */
 .platforms-sub-section {
+
     margin-top: 6rem;
     padding-top: 6rem;
     border-top: 1px solid rgba(226, 232, 240, 0.8);
@@ -1070,11 +1125,17 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    justify-items: center;
 }
 
 @media (min-width: 768px) {
     .platforms-grid {
         grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+    .platforms-grid .platform-card {
+        max-width: 480px;
+        width: 100%;
     }
 }
 
@@ -1086,6 +1147,7 @@ section {
     transition: var(--transition-smooth);
     display: flex;
     flex-direction: column;
+    
 }
 
 .platform-card:hover {
