@@ -526,7 +526,12 @@ section {
 .hero-banner-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+        160deg,
+        rgba(10, 8, 50, 0.68) 0%,
+        rgba(16, 13, 60, 0.60) 50%,
+        rgba(10, 8, 50, 0.72) 100%
+    );
 }
 
 .hero-banner-content {
