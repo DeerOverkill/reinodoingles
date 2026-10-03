@@ -562,6 +562,7 @@ section {
 .hero-banner-content h1 span {
     background: linear-gradient(135deg, var(--color-secondary) 0%, #ffdb6e 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -646,6 +647,7 @@ section {
 .hero-content h1 span {
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -1559,6 +1561,7 @@ section {
 .lead-highlight {
     background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
