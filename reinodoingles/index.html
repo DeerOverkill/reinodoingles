@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Conexão Reino do Idiomas oferece aulas e cursos de inglês online. Metodologia moderna para adultos e adolescentes.">
+    <title>C.R.i - Aulas e Cursos de Inglês | Conexão Reino do Idiomas|Renato De Souza Paula </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Preload LCP Hero Image -->
+    <link rel="preload" as="image" href="assets/cri_hero_banner.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Floating WhatsApp Toggle Button -->
+    <a href="https://wa.me/5511977359879?text=Ola,%20vim%20do%20site%20e%20gostaria%20de%20agendar%20o%20meu%20teste%20de%20nivelamento!" 
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span class="pulse-ring"></span>
+    </a>
+
+    <!-- Header / Navbar -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Conexão Reino do Inglês Home">
+                <span class="logo-svg" style="display:flex; align-items:center; justify-content:center; width: 42px; height: 42px; border-radius: 50%; background-color: #ffffff; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.25);">
+                    <img src="WhatsApp Image 2026-09-21 at 14.26.52.jpeg" alt="C.R.I - Conexão Reino Idiomas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </span>
+                <div class="logo-text">
+                    <span class="logo-brand">C.R.I.</span>
+                    <span class="logo-sub">Conexao Reino Idiomas</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#quemsomos">Quem Somos</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+
+                    <li><a href="#certificacao">Certificações</a></li>
+                    <li><a href="guia-gratis.html" class="nav-free-guide">📥 Guia Grátis</a></li>
+                </ul>
+                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Vim do site e gostaria de mais informações."
+                    class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Fale Conosco</a>
+            </nav>
+
+            <!-- Burger Menu Trigger -->
+            <button class="burger-menu" aria-label="Abrir Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="logo">
+                <span class="logo-brand">C.R.I.</span>
+            </div>
+            <button class="drawer-close" aria-label="Fechar Menu">&times;</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#quemsomos">Quem Somos</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+
+                <li><a href="#certificacao">Certificações</a></li>
+                <li><a href="guia-gratis.html">📥 Guia Grátis</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Vim do site e gostaria de mais informações."
+                    class="btn btn-primary w-full" target="_blank" rel="noopener noreferrer">Fale Conosco</a>
+            </div>
+        </nav>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- Main Layout Container -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section hero-banner-section" id="hero">
+            <div class="hero-banner-bg">
+                <img src="WhatsApp Image 2026-08-20 at 11.32.29.jpeg" alt="C.R.I - Conexão Reino Idiomas" class="hero-banner-img">
+                <div class="hero-banner-overlay"></div>
+            </div>
+            <div class="container hero-banner-content scroll-reveal">
+                <span class="hero-tag">Aulas e Cursos Personalizados</span>
+                <h1>Inglês sob medida para os seus <span>objetivos</span></h1>
+                <p>A <strong>Conexão Reino Idiomas</strong> oferece diversos cursos para você aprender inglês e espanhol conforme
+                    as suas metas, tudo isso com os melhores professores e uma metodologia moderna e comprovada
+                    cientificamente.</p>
+                <div class="hero-actions">
+                    <a href="#cursos" class="btn btn-accent">Quero Conhecer os Cursos</a>
+                    <a href="#quemsomos" class="btn btn-outline">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Para quem é" (Target Audience) Section -->
+        <section class="audience-section" id="para-quem">
+            <div class="container">
+                <div class="section-title text-center scroll-reveal">
+                    <h2>Nossos cursos são para quem:</h2>
+                </div>
+
+                <div class="audience-grid">
+                    <!-- Card 1 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-cyan">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </div>
+                        <h3>Vai morar fora do país</h3>
+                        <p>Vai se mudar para o exterior e precisa aprender inglês? A Conexão Reino Idiomas tem a metodologia ideal para ajudar você!</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-orange">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                            </svg>
+                        </div>
+                        <h3>Precisa do inglês no trabalho</h3>
+                        <p>Para quem quer passar em uma entrevista de emprego ou precisa do inglês corporativo para
+                            subir de cargo e alavancar a carreira.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-navy">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c0 2 2.5 3 6 3s6-1 6-3v-5" />
+                            </svg>
+                        </div>
+                        <h3>Deseja fazer intercâmbio</h3>
+                        <p>Precisa do inglês acadêmico e cotidiano para realizar o seu sonho de intercâmbio? Nós
+                            preparamos você para essa jornada.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-orange">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                            </svg>
+                        </div>
+                        <h3>Não consegue evoluir de nível</h3>
+                        <p>Se você está preso no básico ou intermediário (o famoso platô), a Conexão Reino Idiomas ajuda você a finalmente dominar a fluência.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-cyan">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4z" />
+                            </svg>
+                        </div>
+                        <h3>Quer aprender para viajar</h3>
+                        <p>Possuímos um método comunicativo específico para quem quer viajar sem passar perrengues em
+                            aeroportos, hotéis e restaurantes.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="audience-card scroll-reveal">
+                        <div class="card-icon icon-navy">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3>Precisa de um Certificado</h3>
+                        <p>Preparatórios dedicados para a obtenção de pontuações de destaque em testes de proficiência
+                            internacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Quem Somos" (About Us) Section -->
+        <section class="about-section" id="quemsomos">
+            <div class="container grid-2">
+                <div class="about-content scroll-reveal">
+                    <span class="section-tag">Quem Somos</span>
+                    <h2>A C.R.I Idiomas é a solução ideal para você!</h2>
+                    <p>A <strong>C.R.I Idiomas</strong> é uma escola de inglês premium de aulas individuais e em
+                        pequenos grupos, especializada em adultos e adolescentes. Nossos cursos são personalizados de
+                        acordo com os níveis e preferências de cada aluno.</p>
+                    <p>As aulas são altamente comunicativas e interativas. Usamos métodos e approaches cientificamente
+                        comprovados de aquisição de linguagem. Nossos professores são certificados internacionalmente e
+                        contam com vasta experiência de mercado.</p>
+                    <p class="highlight-text">Acreditamos que aprender inglês é perfeitamente possível Através de um
+                        ambiente dinamico, divertido <strong>e com um ponto de vista ético</strong></p>
+                </div>
+
+                <div class="about-highlights scroll-reveal">
+                    <h3>Diferenciais que aceleram seu aprendizado</h3>
+                    <ul class="highlight-list">
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Aulas interativas:</strong> Foco absoluto em conversação ativa e simulações do
+                                mundo real.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Professores Certificados:</strong> Equipe qualificada com as mais respeitadas
+                                certificações globais.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Clima Acolhedor:</strong> Espaço livre de julgamentos, ideal para destravar a
+                                fala naturalmente.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Aluno como Protagonista:</strong> O professor atua como um facilitador do seu
+                                desenvolvimento individual.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Metas de Rotina:</strong> Planejamento personalizado para integrar o inglês no
+                                seu dia a dia.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bullet-icon">✓</span>
+                            <div>
+                                <strong>Material Moderno:</strong> Acesso a ferramentas digitais e materiais de editoras
+                                líderes mundiais.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Cursos" (Courses) Section -->
+        <section class="courses-section" id="cursos">
+            <div class="container">
+                <div class="section-title text-center scroll-reveal">
+                    <h2>Conheça nossos cursos</h2>
+                    <p>Inglês e Espanhol — aulas personalizadas no formato online</p>
+                </div>
+
+                <!-- Custom Slider / Carousel -->
+                <div class="slider-wrapper scroll-reveal">
+                    <div class="slider-container" id="courseSlider">
+
+                        <!-- Slide 1 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder color-teal">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path
+                                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                                    <path
+                                        d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                                </svg>
+                                <h3>Curso Geral</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag">Todos os Níveis</span>
+                                <h4>Aulas de Inglês Personalizadas</h4>
+                                <p>Cursos sob medida estruturados de acordo com o nível atual e interesses específicos
+                                    de cada estudante.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Estou interessado em fazer um curso de inglês personalizado."
+                                    class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Solicitar
+                                    Orçamento</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder color-orange">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                                </svg>
+                                <h3>Corporativo</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag">Business English</span>
+                                <h4>Grupos Empresariais & In-Company</h4>
+                                <p>Oferecemos cursos focados em inglês corporativo para equipes e líderes que necessitam
+                                    expandir negócios.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Estou interessado no curso de inglês para grupos empresariais."
+                                    class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Falar
+                                    Conosco</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder color-navy">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                </svg>
+                                <h3>Conversação</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag">Níveis Avançados</span>
+                                <h4>Curso de Conversação Dinâmica</h4>
+                                <p>Focado em expandir vocabulário, discutir temas atuais, pronúncia, phrasal verbs e
+                                    fluência natural.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Estou interessado no curso de conversação avançada."
+                                    class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Quero
+                                    Conversar</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder" style="background: linear-gradient(135deg, #c0392b 0%, #8e44ad 100%);">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                                </svg>
+                                <h3>Espanhol em Grupo</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag" style="background: rgba(142,68,173,0.12); color: #8e44ad;">Turmas Reduzidas</span>
+                                <h4>Espanhol em Grupo</h4>
+                                <p>Aprenda espanhol em turmas reduzidas com até 4 alunos. Mais interação, mais prática e muito mais economia — sem abrir mão da qualidade.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Estou interessado no curso de espanhol em grupo."
+                                    class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Ver Turmas</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder" style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #f39c12 100%);">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                </svg>
+                                <h3>Espanhol Geral</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag" style="background: rgba(231,76,60,0.12); color: #c0392b;">Todos os Níveis</span>
+                                <h4>Aulas de Espanhol Personalizadas</h4>
+                                <p>Do básico ao avançado, aprenda espanhol com metodologia comunicativa e professores certificados, no seu ritmo.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Estou interessado em fazer um curso de espanhol personalizado."
+                                    class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="slide-card">
+                            <div class="slide-image-placeholder" style="background: linear-gradient(135deg, #8e44ad 0%, #c0392b 100%);">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <h3>Espanhol para Viagens</h3>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-tag" style="background: rgba(142,68,173,0.12); color: #8e44ad;">Iniciante & Intermediário</span>
+                                <h4>Espanhol para Viagens e Negócios</h4>
+                                <p>Aprenda o espanhol prático para se virar em países hispânicos — hotéis, restaurantes, reuniões e conversas do dia a dia.</p>
+                                <a href="https://api.whatsapp.com/send?phone=5511977359879&text=Olá! Estou interessado no curso de espanhol para viagens e negócios."
+                                    class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Quero Aprender</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" id="sliderPrev" aria-label="Slide anterior">&#10094;</button>
+                        <div class="slider-dots" id="sliderDots"></div>
+                        <button class="slider-arrow next" id="sliderNext" aria-label="Próximo slide">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Vantagens Sub-section -->
+                <div class="courses-perks scroll-reveal">
+                    <div class="perks-grid">
+                        <div class="perk-item">
+                            <div class="perk-icon"></div>
+                            <h4>Aulas 100% Personalizadas</h4>
+                            <p>Conteúdo e ritmo adaptados ao seu nível e objetivos específicos.</p>
+                        </div>
+                        <div class="perk-item">
+                            <div class="perk-icon"></div>
+                            <h4>Horários Flexíveis</h4>
+                            <p>Escolha os melhores horários para encaixar o inglês na sua rotina.</p>
+                        </div>
+                        <div class="perk-item">
+                            <div class="perk-icon"></div>
+                            <h4>Formato Online</h4>
+                            <p>Estude de onde estiver com a mesma qualidade das aulas presenciais.</p>
+                        </div>
+                        <div class="perk-item">
+                            <div class="perk-icon"></div>
+                            <h4>Resultados Rápidos</h4>
+                            <p>Metodologia focada em comunicação ativa desde a primeira aula.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Reviews Section -->
+                <div class="google-reviews-section scroll-reveal">
+                    <div class="google-reviews-header">
+                        <div class="google-reviews-badge">
+                            <svg class="google-icon" viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            </svg>
+                            <div class="google-reviews-score">
+                                <span class="score-number">5.0</span>
+                                <div class="score-stars">★★★★★</div>
+                                <span class="score-count">34 avaliações no Google</span>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/search?q=conex%C3%A3o+reino+idiomas" target="_blank" rel="noopener noreferrer" class="google-reviews-link">
+                            Ver todas as avaliações →
+                        </a>
+                    </div>
+
+                    <div class="google-reviews-grid">
+
+                        <!-- Review 1 -->
+                        <div class="google-review-card">
+                            <div class="review-card-header">
+                                <div class="reviewer-avatar" style="background: linear-gradient(135deg, #e84521, #f59e0b);">RC</div>
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Rhyan Capello</span>
+                                    <span class="reviewer-meta">3 meses atrás</span>
+                                </div>
+                                <svg class="google-g-icon" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                </svg>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Sou aluno do teacher Renato a mais de 3 anos e sinceramente foi o melhor professor de inglês que já tive na minha vida, tem uma dinâmica de aula muito boa. Quando comecei a estudar meu inglês era muito travado e não tinha um vocabulário muito bom, agora consigo me comunicar e entender bem também oq é falado. <strong>Recomendo MUITO!!</strong>"
+                            </p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="google-review-card">
+                            <div class="review-card-header">
+                                <div class="reviewer-avatar" style="background: linear-gradient(135deg, #1495a6, #1e40af);">GM</div>
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Giovana Meira</span>
+                                    <span class="reviewer-meta">2 meses atrás</span>
+                                </div>
+                                <svg class="google-g-icon" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                </svg>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Estudo na escola há 2 anos e estou muito satisfeita com a minha evolução. As aulas de inglês são dinâmicas e fáceis de acompanhar. Antes eu tinha muita dificuldade, e hoje me sinto muito mais confiante. Minha experiência com o Professor Renato é excelente, ele explica muito bem e está sempre disposto a ajudar. <strong>Recomendo a escola para quem quer aprender de verdade!</strong>"
+                            </p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="google-review-card">
+                            <div class="review-card-header">
+                                <div class="reviewer-avatar" style="background: linear-gradient(135deg, #100d3c, #1495a6);">ÁB</div>
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">Átila Batista</span>
+                                    <span class="reviewer-meta">Local Guide · 3 meses atrás</span>
+                                </div>
+                                <svg class="google-g-icon" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                </svg>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "O professor Renato é ótimo. Seu método de ensino é muito bom e dinâmico pra aprender. Gostei muito das aulas que tive com ele, por motivos pessoais, infelizmente não pude continuar, mas é um <strong>excelente professor</strong>."
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Google Reviews Section -->
+
+            </div>
+        </section>
+
+        <!-- "Certificações" (Prep Courses) Section -->
+        <section class="certifications-section" id="certificacao">
+            <div class="container">
+                <div class="certifications-card-wrapper grid-2">
+                    <div class="certifications-text scroll-reveal">
+                        <span class="section-tag tag-light">Exames de Proficiência</span>
+                        <h2>Preparatórios para as principais Certificações Internacionais</h2>
+                        <p>Obtenha a pontuação desejada para vistos, processos de imigração, candidaturas corporativas
+                            globais ou admissões em universidades no exterior. Nossa metodologia de treinamento foca na
+                            estrutura das provas e resolução de simulados.</p>
+                        <a href="https://wa.me/5511977359879?text=Olá! Gostaria de me preparar para um certificado internacional."
+                            class="btn btn-accent" target="_blank" rel="noopener noreferrer">Quero me Preparar para uma
+                            Certificação</a>
+                    </div>
+
+                    <div class="certifications-grid scroll-reveal">
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Preparação para IELTS</h4>
+                                <p>Foco detalhado nas sessões de Speaking, Writing, Reading e Listening do teste oficial
+                                    acadêmico ou geral.</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Preparação para TOEFL</h4>
+                                <p>Estratégias específicas para gerenciar o tempo e gabaritar as questões do TOEFL iBT
+                                    com simulados práticos.</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Preparação para TOEIC</h4>
+                                <p>Treinamento direcionado para quem precisa comprovar competência no inglês de negócios
+                                    corporativo.</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-check">✓</div>
+                            <div>
+                                <h4>Exames de Cambridge (PET, FCE, CAE, CPE)</h4>
+                                <p>Cronograma intensivo visando aprovação nas qualificações mais prestigiadas e
+                                    vitalícias da Universidade de Cambridge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- App Section -->
+        <section class="app-section" id="app">
+            <div class="container grid-2">
+                <div class="app-image scroll-reveal">
+                    <img src="assets/app_mockup.png" alt="Aplicativo Inglês Notion rodando em um smartphone moderno"
+                        class="app-mockup-img" loading="lazy">
+                </div>
+
+                <div class="app-content scroll-reveal">
+                    <span class="section-tag tag-light">Aplicativo Próprio</span>
+                    <h2>Aprenda com o Conexão Diaria na palma da sua mão</h2>
+                    <p>Desenvolvemos uma plataforma de aprendizado móvel exclusiva para dar suporte aos nossos alunos. Através da plataforma disponiblizada pelo professor. No <strong>Conexão Diaria</strong>, você tem acesso contínuo a vídeos rápidos, exercícios práticos e materiais novos adicionados semanalmente.</p>
+                    <p>Transforme momentos livres da sua rotina diária em progresso consistente rumo à fluência.</p>
+                    
+
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-brand">C.R.I</span>
+                </div>
+                <p>Ensino personalizado de inglês para adultos e adolescentes focado na comunicação ativa e resultados
+                    práticos.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Menu Rápido</h4>
+                <ul>
+                    <li><a href="#quemsomos">Quem Somos</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#certificacao">Certificações</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contato Executivo</h4>
+                <p>WhatsApp Principal: +55 11 97735-9879</p>
+                <p>WhatsApp Comercial: +55 11 97735-9879</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 C.R.I - Conexão Reino Idiomas Renato de Paula. Todos os direitos reservados.</p>
+                <p>CNPJ: Renato Souza de Paula 19.625.381/0001-22</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
